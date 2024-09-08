@@ -1,0 +1,89 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:  "PT Serif", serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.form-container h1{
+    font-size: 45px;
+   color: rgb(79, 23, 135)
+}
+.form-container, .resume-preview {
+    width: 48%;
+}
+
+form {
+    width :150vh;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color:rgb(173, 60, 225)
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(79, 23, 135)
+}
+
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button {
+    display: block;
+    width: 30%;
+    padding: 12px;
+    background-color: rgb(79, 23, 135);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color:rgb(173, 60, 225);
+    transform: scale(1.05);
+}
+
+#toggle-skills {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 18%;
+    height: 20%;
+}

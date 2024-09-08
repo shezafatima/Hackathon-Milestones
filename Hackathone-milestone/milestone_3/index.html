@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Resume Builder Form -->
+        <div class="form-container">
+            <h1>Resume Builder</h1>
+            <form id="resume-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="contact">Contact Details:</label>
+                    <input type="text" id="contact" name="contact" required>
+                    
+                    <label for="profile-picture">Profile Picture URL:</label>
+                    <input type="text" id="profile-picture" name="profile-picture">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Education</legend>
+                    <textarea id="education" name="education" placeholder="Enter your education details here..." required></textarea>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Skills</legend>
+                    <textarea id="skills" name="skills" placeholder="Enter your skills here..." required></textarea>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <textarea id="work-experience" name="work-experience" placeholder="Enter your work experience here..." required></textarea>
+                </fieldset>
+                
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+        
+       <!-- Resume Preview -->
+        <div class="resume-preview">
+            <header class="personal-info">
+                <img src="assets/default_pic.jpg" alt="Profile Picture" id="profile-preview" class="profile-picture">
+                <h1 id="name-preview"> Name</h1>
+                <p id="contact-preview">Contact: email@example.com | +1234567890</p>
+            </header>
+            
+            <section class="education">
+                <h2>Education</h2>
+                <p id="education-preview">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </section>
+            
+            <section class="skills">
+                <h2>Skills</h2>
+                <p id="skills-preview">Lorem ipsum dolor ,sit amet, consectetur ,adipisicing elit., Facere, qui?</p>
+            </section>
+            
+            <section class="work-experience">
+                <h2>Work Experience</h2>
+                <p id="work-experience-preview">Lorem ipsum dolor sit amet.</p>
+            </section>
+            
+            <button id="toggle-skills">Toogle Skills</button>
+        </div>
+    </div> 
+    <script src="app.js"></script>
+</body>
+</html>
