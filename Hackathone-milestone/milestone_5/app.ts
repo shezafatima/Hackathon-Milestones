@@ -144,6 +144,25 @@ if (downloadButton) {
     downloadButton.addEventListener('click', downloadPDF);
 }
 
+// app.ts
+window.onload = () => {
+    const printButton = document.getElementById('download-pdf') as HTMLButtonElement;
+    const resumeContent = document.getElementById('resumeOutput') as HTMLTextAreaElement;
 
+    printButton.addEventListener('click', () => {
+        const content = resumeContent.value;
 
-
+        // Create a new window or tab
+        const printWindow = window.open('', '', 'height=600,width=800');
+        if (printWindow) {
+            printWindow.document.write('<html><head><title>Print Resume</title></head><body>');
+            printWindow.document.write('<pre>' + content + '</pre>'); // Wrap content in <pre> for formatting
+            printWindow.document.write('</body></html>');
+            printWindow.document.close(); // Close the document for writing
+            printWindow.focus(); // Focus the new window/tab
+            printWindow.print(); // Open the print dialog
+        } else {
+            alert('Failed to open print window.');
+        }
+    });
+};
