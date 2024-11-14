@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+
+        <form id="resume-form">
+            <section>
+                <h2>Personal Information</h2>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone" required>
+                <input type="file" id="profile-pic" placeholder="Choose Profile Picture" accept="image/*">
+            </section>
+
+            <section>
+                <h2>About Me</h2>
+                <textarea id="about-me" placeholder="A brief introduction about yourself" required></textarea>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <input type="text" id="degree" placeholder="Degree" required>
+                <input type="text" id="institution" placeholder="Institution Name" required>
+                <input type="text" id="grad-year" placeholder="Year" required>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <input type="text" id="skills" placeholder="Your Skills" required>
+            </section>
+
+            <section>
+                <h2>Languages</h2>
+                <input type="text" id="languages" placeholder="Languages" required>
+            </section>
+
+            <section>
+                <h2>Work Experience</h2>
+                <input type="text" id="job-title" placeholder="Job Title" required>
+                <input type="text" id="company" placeholder="Company Name" required>
+                <input type="text" id="work-years" placeholder="Years" required>
+            </section>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+<div class="g-resume">
+
+    <div id="resume" class="hidden">
+        <header>
+            <div class="resume-sidebar">
+                <img id="resume-profile-pic" alt="Profile Picture" class="profile-pic">
+                <section id="resume-about-me">
+                    <p id="resume-about-me-text"></p>
+                </section>
+                <h1 id="resume-name"></h1>
+                <p class="contact" id="resume-contact"></p>
+                <button id="toggle-skills">Show Skills</button>
+                <section id="resume-skills" class="hidden">
+                    <h2>Skills</h2>
+                    <p id="resume-skills-text"></p>
+                </section>
+            </div>
+
+            <div class="resume-content">
+              
+                <section id="resume-education">
+                    <h2>Education</h2>
+                    <p id="resume-education-text"></p>
+                </section>
+
+              
+                <section id="resume-languages">
+                    <h2>Languages</h2>
+                    <p id="resume-languages-text"></p>
+                </section>
+
+                <section id="resume-work">
+                    <h2>Work Experience</h2>
+                    <p id="resume-work-text"></p>
+                </section>
+            </div>
+        </header>
+    </div>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
